@@ -254,3 +254,48 @@ footer p {
     font-size: 14px;
     line-height: 1.6;
 }
+
+.lyrics {
+    margin-top: 10px;
+    font-family: 'Dancing Script'; /* 손글씨 느낌 */
+    font-size: 1.2rem; /* 적당한 크기 */
+    line-height: 1.6; /* 줄 간격 */
+    text-align: center; /* 가운데 정렬 */
+    font-style: italic; /* 약간 기울임 */
+    padding: 20px; /* 여백 */
+    background: white; /* 따뜻한 배경 */
+    border-radius: 10px; /* 부드러운 모서리 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.music-button {
+    border: none;
+    border-radius: 30%;
+    background-color: lightgoldenrodyellow;
+    cursor: pointer;
+    padding: 3px 10px;
+    font-size: 1.2rem;
+}
+
+.music-button {
+    cursor: pointer; /* 손가락 모양 */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: lightyellow;
+    color: white;
+    transition: all 0.1s ease-in-out; /* 부드러운 애니메이션 */
+}
