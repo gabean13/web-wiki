@@ -1,154 +1,256 @@
 body {
-  font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
     Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  color: var(--font-default-color);
+    font-size: 16px;
+    color: var(--font-default-color);
+    background-color: #FFFDF0;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Jua", serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Jua", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #app {
-  display: flex;
-  flex-direction: row;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
 }
 
 header {
-  padding-top: var(--page-padding);
-  width: var(--header-width);
-  background-color: var(--header-bg-color);
-  flex-shrink: 0;
+    padding-top: var(--page-padding);
+    width: var(--header-width);
+    background-color: var(--header-bg-color);
+    flex-shrink: 0;
 }
 
 h1.logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1.logo span.text {
-  padding: 16px;
-  font-size: 1.8rem;
+    padding: 16px;
+    font-size: 1.8rem;
 }
 
 main {
-  padding: var(--page-padding);
+    padding: var(--page-padding);
+}
+
+.gallery {
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px auto;
+    gap: 10px;
+}
+
+.photo {
+    width: 290px;
+    height: 290px;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 290px;
+    height: 290px;
+    object-fit: cover;
+    object-position: center;
 }
 
 h2.title {
-  font-size: 2.4rem;
-  margin-bottom: 24px;
+    font-size: 2.4rem;
+    margin-bottom: 24px;
 }
 
 h3.subtitle {
-  font-size: 1.6rem;
-  margin: var(--page-subtitle-margin-y) 0;
+    font-size: 1.6rem;
+    margin: var(--page-subtitle-margin-y) 0;
 }
 
-h4 {
-  font-size: 1.4rem;
-  margin-bottom: var(--page-subtitle-margin-y);
+.article {
+    margin-bottom: 20px;
 }
 
 section > p,
 article > p {
-  line-height: 24px;
-  text-indent: 8px;
+    line-height: 24px;
+    text-indent: 8px;
 }
 
 section,
 article {
-  display: flex;
-  flex-flow: column;
+    display: flex;
+    flex-flow: column;
 }
 
 div.thumbnail {
-  display: flex;
-  justify-content: center;
-  margin-bottom: var(--page-paragraph-margin-y);
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--page-paragraph-margin-y);
 }
 
 section::after {
-  content: "";
-  display: block;
-  margin-top: var(--page-subtitle-margin-y);
-  border-bottom: 1px solid var(--divider-color);
+    content: "";
+    display: block;
+    margin-top: var(--page-subtitle-margin-y);
+    border-bottom: 1px solid var(--divider-color);
 }
 
 hr {
-  border: 1px solid var(--divider-color);
+    border: 1px solid var(--divider-color);
 }
 
 aside {
-  padding-top: var(--page-padding-top);
-  width: var(--aside-width);
-  background-color: var(--aside-bg-color);
-  flex-shrink: 0;
+    padding-top: var(--page-padding-top);
+    width: var(--aside-width);
+    background-color: var(--aside-bg-color);
+    flex-shrink: 0;
 }
 
 aside h2 {
-  font-size: 1.7rem;
+    font-size: 1.7rem;
 }
 
 .profile-image {
-  background-image: url("https://images.unsplash.com/photo-1618979251882-0b40ef3617f0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: 100%;
-  background-position: center 100%;
-  width: var(--aside-width);
-  height: var(--aside-width);
+    background-image: url("../images/대표사진.jpeg");
+    background-size: 100%;
+    background-position: center 100%;
+    width: var(--aside-width);
+    height: var(--aside-width);
 
-  text-indent: -1000rem;
+    text-indent: -1000rem;
 }
 
 aside.right-sidebar nav {
-  padding: var(--right-sidebar-padding);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: var(--right-sidebar-padding);
 }
 
 ol.contents {
-  list-style-type: decimal;
-  padding: 24px;
+    list-style-type: decimal;
+    padding: 24px;
 }
 
 ol.contents li:not(:last-child) {
-  margin-bottom: 16px;
+    margin-bottom: 16px;
 }
 
 ol.contents li a {
-  text-decoration: none;
-  color: var(--font-default-color);
+    text-decoration: none;
+    color: var(--font-default-color);
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  padding-top: var(--page-padding-top);
-  align-items: center;
-  margin: 24px;
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--page-padding-top);
+    align-items: center;
+    margin: 24px;
 }
 
 footer p {
-  margin-top: 8px;
+    margin-top: 8px;
 }
 
 :root {
-  --page-padding: 48px;
-  --page-subtitle-margin-y: 32px;
-  --page-paragraph-margin-y: 16px;
-  --right-sidebar-padding: 32px;
+    --page-padding: 48px;
+    --page-subtitle-margin-y: 32px;
+    --page-paragraph-margin-y: 16px;
+    --right-sidebar-padding: 32px;
 
-  --header-width: 235px;
-  --header-bg-color: #f6f6f6;
+    --header-width: 235px;
+    --header-bg-color: #FFF2C2;
 
-  --aside-width: 350px;
-  --aside-bg-color: #f6f6f6;
+    --aside-width: 350px;
+    --aside-bg-color: #FFF2C2;
 
-  --divider-color: #efefef;
-  --font-default-color: #333;
+    --divider-color: #D9DFC6;
+    --font-default-color: #504B38;
+}
+
+.comment-writing-container {
+    display: flex;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 60px;
+}
+
+.comment-logo {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.comment-input {
+    flex-grow: 1;
+    border: none;
+    padding: 12px 15px;
+    font-size: 14px;
+    outline: none;
+}
+
+.comment-buttons {
+    display: flex;
+}
+
+.cancel-btn {
+    background-color: #A79277;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    width: 80px;
+}
+
+.submit-btn {
+    background-color: #727D73;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    width: 80px;
+}
+
+.comment-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: white;
+    padding: 15px;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.author {
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.comment-content {
+    font-size: 14px;
+    line-height: 1.6;
 }
